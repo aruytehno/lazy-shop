@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Shop - Интернет-магазин шин</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Lazy Shop</h1>
+                <p>Магазин качественных шин</p>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="cart.html" id="cart-link">Корзина (0)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filters">
+            <h2>Фильтры</h2>
+            <div class="filter-group">
+                <label for="category">Категория:</label>
+                <select id="category">
+                    <option value="">Все</option>
+                    <option value="Сельскохозяйственные">Сельскохозяйственные</option>
+                    <option value="Грузовые">Грузовые</option>
+                    <option value="Легкогрузовые">Легкогрузовые</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="brand">Бренд:</label>
+                <select id="brand">
+                    <option value="">Все</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Цена до:</label>
+                <input type="range" id="price" min="0" max="200000" step="10000">
+                <span id="price-value">200000 руб.</span>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Наши товары</h2>
+            <div id="products-container" class="products-grid">
+                <!-- Товары будут загружены через JavaScript -->
+                <div class="loading">Загрузка товаров...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lazy Shop. Все права защищены.</p>
+            <p>Телефон: +7 (XXX) XXX-XX-XX | Email: info@lazyshop.ru</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
